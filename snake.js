@@ -31,7 +31,7 @@ function update() {
     if (gameOver) {
         if (score > highScore){
             score = highScore
-        alert("highscore")} 
+        alert(`Congrats you set a new high score, your high score is : ${highScore}`)} 
         return
     }
     context.fillStyle = "black"
@@ -67,13 +67,13 @@ function update() {
 
     if (snakeX < 0 || snakeX > cols * blockSize || snakeY < 0 || snakeY > rows * blockSize) {
         gameOver = true
-        alert("gameOver")
+        alert("Game Over")
     }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeBody[i][0] == snakeX && snakeBody[i][1] == snakeY) {
             gameOver = true
-            alert("gameOver")
+            alert("Game Over")
         }
     }
     console.log(highScore);
